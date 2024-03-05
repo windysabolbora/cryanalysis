@@ -18,7 +18,7 @@ def app():
     st.subheader('by Fatima Grace Apinan|| BSCS-3B || WVSU CICT')
     
 # Load the pre-trained model
-model_path = "models/myRandomForest.pkl"  # Replace with your model path
+model_path = "myRandomForest.pkl"  # Replace with your model path
 with open(model_path, "rb") as f:
     model = pickle.load(f)
 def record_audio():
