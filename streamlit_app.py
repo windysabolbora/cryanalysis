@@ -1,3 +1,4 @@
+pip install streamlit librosa numpy pandas scikit-learn tensorflow pickle pyaudio
 import streamlit as st
 import librosa
 import numpy as np
