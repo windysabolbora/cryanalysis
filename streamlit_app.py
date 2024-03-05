@@ -10,6 +10,12 @@ import pickle
 import pyaudio
 import wave
 import os
+
+# Define the Streamlit app
+def app():
+    
+    st.title('Pixel Art Classification')
+    st.subheader('by Fatima Grace Apinan|| BSCS-3B || WVSU CICT')
 # Load the pre-trained model
 model_path = "models/myRandomForest.pkl"  # Replace with your model path
 with open(model_path, "rb") as f:
@@ -82,3 +88,6 @@ if recorded_audio is not None or st.button("Classify"):
         st.success(f"Predicted cry: {predicted_cry}")
     except Exception as e:
         st.error
+#run the app
+if __name__ == "__main__":
+    app()
