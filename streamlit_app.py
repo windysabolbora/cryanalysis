@@ -1,5 +1,5 @@
 '/home/adminuser/venv/bin/python -m pip install --upgrade pip'
-pip install streamlit librosa numpy pandas scikit-learn tensorflow pickle pyaudio
+'pip install streamlit librosa numpy pandas scikit-learn tensorflow pickle pyaudio'
 import streamlit as st
 import librosa
 import numpy as np
