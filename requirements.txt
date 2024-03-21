@@ -6,7 +6,6 @@ seaborn
 scikit-learn
 numpy
 librosa
-PyAudio==0.2.14
 pyaudio
 wave
 
