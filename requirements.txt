@@ -6,7 +6,7 @@ seaborn
 scikit-learn
 numpy
 librosa
-joblib
+PyAudio==0.2.14
 pyaudio
 wave
-pickle
+
