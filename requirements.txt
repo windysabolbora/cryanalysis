@@ -7,4 +7,5 @@ scikit-learn
 numpy
 librosa
 wave
+PyAudio==0.2.14
 
