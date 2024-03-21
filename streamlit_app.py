@@ -13,18 +13,24 @@ import pickle
 def app():
     st.title('Infant Cry Classification')
 
-    # Display choice of classifier
-    options = ['LSTM', 'Random Forest']
-    selected_option = st.selectbox('Select the classifier', options)
+   # Display choice of classifier
+    options = ['SVM', 'Random Forest']
+    selected_option = st.sidebar.selectbox('Select the classifier', options)
+    if selected_option == 'SVM':
+        clf = SVC(kernel= 'linear')
+        selected_model = 1
+    elif selected_option=='Random Forest':
+        clf = RandomForestClassifier(n_jobs=2, random_state=0)
+        selected_model = 5
 
     # Define model loading functions based on classifier type
-    def load_lstm_model():
+    def load_svm_model():
         try:
-            model_path = "lstm_audio_model.joblib"
+            model_path = "svm_audio_model.joblib"
             model = joblib.load(model_path)
             return model
         except FileNotFoundError:
-            st.error(f"LSTM model not found at '{model_path}'. Please ensure the model exists.")
+            st.error(f"SVM model not found at '{model_path}'. Please ensure the model exists.")
             return None
 
     def load_random_forest_model():
