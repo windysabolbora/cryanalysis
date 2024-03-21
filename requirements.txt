@@ -9,3 +9,4 @@ librosa
 wave
 pyaudio
 toml
+portaudio
